@@ -5,10 +5,7 @@
 - **Mac / Linux:**
   ```bash
   ./gradlew bootRun
-  
-- **Windows**
-  ```bash
-  ./gradlew bootRun
+
   
 ## 접속확인
 
