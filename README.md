@@ -1,11 +1,13 @@
 # 라이브 방송 리스트 웹 페이지
 실시간 라이브 방송 및 홈쇼핑 데이터를 수집하여 상위 10개 목록을 보여주는 간단한 웹 애플리케이션
 
+## 기술 스택
+- Java, Spring Boot, Thymeleaf
+
 ## 실행방법 
 - **Mac / Linux:**
   ```bash
   ./gradlew bootRun
-
   
 ## 접속확인
 
