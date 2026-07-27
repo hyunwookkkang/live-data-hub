@@ -8,7 +8,7 @@
   
 - **Windows**
   ```bash
-  gradlew bootRun
+  ./gradlew bootRun
   
 ## 접속확인
 
