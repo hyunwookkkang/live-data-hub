@@ -37,7 +37,7 @@
                 <table class="table table-hover table-striped align-middle mb-0 text-center">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col" style="width: 30%;">방송정보(제목)</th>
+                        <th scope="col" style="width: 35%;">방송정보(제목)</th>
                         <th scope="col">분류</th>
                         <th scope="col">방송시간</th>
                         <th scope="col">조회수/시청률</th>
@@ -51,11 +51,21 @@
                     <tr th:if="${#lists.isEmpty(broadcastList)}">
                         <td colspan="7" class="py-4 text-muted">수집된 방송 데이터가 없습니다.</td>
                     </tr>
-                    <!-- 데이터 리스트 순회 (Thymeleaf) -->
-                    <tr th:each="item : ${broadcastList}">
-                        <td class="text-start fw-semibold" th:text="${item.title}">방송 제목</td>
+                    <!-- 데이터 리스트 순회 -->
+                    <tr th:each="item, stat : ${broadcastList}">
+                        <td class="text-start ps-3">
+                            <div class="d-flex align-items-center">
+
+                                <span class="fw-bold text-primary me-3 flex-shrink-0" th:text="${stat.count}">1</span>
+
+                                <div class="d-flex flex-column ms-1">
+                                    <div class="fw-semibold text-truncate" style="max-width: 320px;" th:text="${item.title}">방송 제목</div>
+                                    <div class="text-muted small mt-1" th:text="${item.platform}">네이버쇼핑LIVE</div>
+                                </div>
+                            </div>
+                        </td>
                         <td><span class="badge bg-secondary" th:text="${item.category}">분류</span></td>
-                        <td th:text="${item.broadcastTime}">00:00</td>
+                        <td style="white-space: pre-line;" th:text="${item.broadcastTime}">00:00</td>
                         <td th:text="${item.views}">0</td>
                         <td th:text="${item.salesCount}">0</td>
                         <td class="text-success fw-bold" th:text="${item.revenue}">0원</td>

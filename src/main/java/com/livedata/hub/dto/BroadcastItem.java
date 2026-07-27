@@ -13,6 +13,7 @@ import lombok.Setter;
 @Builder
 public class BroadcastItem {
     private String title;          // 방송정보(제목)
+    private String platform;   // "네이버쇼핑LIVE"
     private String category;       // 분류
     private String broadcastTime;  // 방송시간
     private String views;          // 조회수/시청률
