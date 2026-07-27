@@ -7,7 +7,8 @@
   ./gradlew bootRun
   
 - **Windows**
-  gradlew bootRun
+  ```bash
+  ./gradlew bootRun
   
 접속확인
 서버 실행 후 브라우저에서 아래 주소로 접속합니다.
